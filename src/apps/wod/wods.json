@@ -1,12 +1,46 @@
 {
     "workouts": [
         {
-            "name": "test",
+            "name": "The Nuncupative Maintenance",
             "workout": {
                 "rounds": 1,
                 "items": [
                     "3K Run"
-                ]
+                ],
+                "for_time": true
+            }
+        },
+        {
+            "name": "The Unific Pseudoscience",
+            "workout": {
+                "rounds": 1,
+                "items": [
+                    "5K Run"
+                ],
+                "for_time": true
+            }
+        },
+        {
+            "name": "The Nonflowering Occasion",
+            "workout": {
+                "rounds": 3,
+                "items": [
+                    "21 burpees"
+                ],
+                "for_time": true
+            }
+        },
+        {
+            "name": "The Centaurian Minister",
+            "workout": {
+                "rounds": 4,
+                "items": [
+                    "10 push ups",
+                    "100M run",
+                    "30 second plank",
+                    "100M run"
+                ],
+                "for_time": true
             }
         }
     ]
