@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./server/app-server.js",
-    "unit-v": "ava ./test/**/*.spec.js --verbose"
+    "unit-v": "ava ./test/unit/**/*.spec.js --verbose",
+    "integration-v": "ava ./test/integration/**/*.spec.js --verbose"
   },
   "author": "Alex Wilson",
   "license": "ISC",
@@ -14,7 +15,8 @@
     "axios": "^0.19.2",
     "chalk": "^4.0.0",
     "express": "^4.17.1",
-    "jsonfile": "^6.0.1"
+    "jsonfile": "^6.0.1",
+    "redis": "^3.0.2"
   },
   "devDependencies": {
     "ava": "^3.8.1"

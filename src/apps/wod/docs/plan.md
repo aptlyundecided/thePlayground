@@ -22,3 +22,4 @@ It's going to be dead stupid.  I'll just make it super-fuckin-minimal.  Pull ups
 - [x] Create a proper workout data structure
 - [ ] Create the vue components which will handle this
 - [ ] Create a redis structure to hold the last 14 days workouts
+- [ ] Add timestamp to the redis structure for the workout so it's known when it's added.
