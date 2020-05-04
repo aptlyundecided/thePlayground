@@ -1,0 +1,13 @@
+{
+    "workouts": [
+        {
+            "name": "test",
+            "workout": {
+                "rounds": 1,
+                "items": [
+                    "3K Run"
+                ]
+            }
+        }
+    ]
+}
