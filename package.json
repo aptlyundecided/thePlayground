@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./server/app-server.js"
+    "start": "node ./server/app-server.js",
+    "unit-v": "ava ./test/**/*.spec.js --verbose"
   },
   "author": "Alex Wilson",
   "license": "ISC",
@@ -15,6 +16,6 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "ava": "^3.6.0"
+    "ava": "^3.8.1"
   }
 }
