@@ -1,6 +1,5 @@
 const test = require('ava')
 const addWOD = require('../../../../src/apps/wod/services/Redis/workouts/wod_list/add_workout')
-// const createClient = require('../../../../src/apps/wod/services/Redis/client')
 /*]
 [|]
 [*/

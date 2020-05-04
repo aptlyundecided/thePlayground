@@ -11,22 +11,31 @@
 [*/
 const express = require('express')
 const path = require('path')
+const helmet = require('helmet')
 /*]
 [|] --------------------------------------------------------- ||
 [|]        Globals
 [|] --------------------------------------------------------- ||
 [*/
 const port = process.env.PORT || 5000
+const app = express()
+/*]
+[|] --------------------------------------------------------- ||
+[|]        Import Routers
+[|] --------------------------------------------------------- ||
+[*/
+const WOD_router = require('./routes/wod')
+/*]
+[|] --------------------------------------------------------- ||
+[|]        Configure Application and Routers
+[|] --------------------------------------------------------- ||
+[*/
+app.use(helmet())
+app.use(express.static(path.join(__dirname, '../src/vue_front_end/dist/')))
 /*]
 [|]
 [*/
-const app = express()
-app.use(express.static(path.join(__dirname, '../src/vue_front_end/dist/')))
-/*]
-[|] --------------------------------------------------------- ||
-[|]        Configure Routers
-[|] --------------------------------------------------------- ||
-[*/
+app.use('/WOD', WOD_router)
 /*]
 [|] --------------------------------------------------------- ||
 [|]        Configure Application Level Routes

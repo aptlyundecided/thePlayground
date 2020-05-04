@@ -1,21 +1,39 @@
 const path = require('path')
-const fileName = path.basename(__filename)
+const _filename = path.basename(__filename)
+const createClient = require('../../client')
 /*]
 [|]
 [*/
 module.exports = (client) => {
     return new Promise((resolve, reject) => {
-        client.get('wod_list', (err, res) => {
-            if (!err) {
-                resolve(res)
-            } else {
-                reject({
-                    msg: 'Failed to get "wod_list" from redis',
-                    filename: fileName,
-                    err: err
+        Promise.resolve()
+            .then(() => {
+                if (typeof client === 'undefined') {
+                    return createClient()
+                } else {
+                    return client
+                }
+            })
+            .then((client) => {
+                client.get('wod_list', (err, res) => {
+                    if (!err) {
+                        resolve(res)
+                    } else {
+                        reject({
+                            msg: 'Failed to get "wod_list" from redis',
+                            filename: _filename,
+                            err: err
+                        })
+                    }
                 })
-            }
-        })
+            })
+            .catch((e) => {
+                reject({
+                    msg: 'failed to get WOD list from redis',
+                    filename: _filename,
+                    err: e
+                })
+            })
     })
 }
 /*]
