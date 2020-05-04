@@ -1,7 +1,7 @@
 <template lang='pug'>
     v-container
         v-card
-            v-card-content
+            v-card-text
                 h1 Alex Wilson
                 h2 Programming Enthusiast
                 p Actual 'Build my app' alien from Rick & Morty 

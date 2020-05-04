@@ -40,8 +40,11 @@ module.exports = (newWorkout) => {
                 }
             })
             .then(() => {
+                if (controlStruct.workouts.length > 9) {
+                    controlStruct.workouts = controlStruct.workouts.slice(1)
+                }
                 /*]
-                [|] TODO|AW: Take this silly shit out!
+                [|]
                 [*/
                 controlStruct.workouts.push(newWorkout)
                 /*]

@@ -3,7 +3,7 @@
         v-card
             v-card-title
                 div(class='md-title') Available Apps
-            v-card-content
+            v-card-text
                 v-list
                     router-link(to='/WOD')
                         div(class='app-list-item')

@@ -10,7 +10,7 @@
 [*/
 const express = require('express')
 const body_parser = require('body-parser')
-const WOD_DB = require('../../src/apps/wod/services/Redis')
+const R = require('../../src/apps/wod/services/Redis')
 /*]
 [|]
 [*/
@@ -29,7 +29,7 @@ const router = express.Router()
 [|] ---------------------------------------------------------
 [*/
 router.post('/insomnia/get-wod-list', (req, res) => {
-    WOD_DB.wod_list.get_workouts()
+    R.wod_list.get_workouts()
         .then((workoutString) => {
             res.send(workoutString)
         })
@@ -44,7 +44,7 @@ router.post('/insomnia/get-wod-list', (req, res) => {
 [|]
 [*/
 router.post('/insomnia/clear-wod-list', (req, res) => {
-    WOD_DB.wod_list.clear_wod_list()
+    R.wod_list.clear_wod_list()
         .then(() => {
             res.send({
                 msg: 'wod_list has been cleared'
@@ -65,7 +65,7 @@ router.post('/insomnia/add-workout', json_parser, (req, res) => {
     /*]
     [|]
     [*/
-    WOD_DB.wod_list.add_workout(workout)
+    R.wod_list.add_workout(workout)
         .then(() => {
             res.send({
                 msg: 'Added a new workout!'
@@ -74,6 +74,24 @@ router.post('/insomnia/add-workout', json_parser, (req, res) => {
         .catch((e) => {
             res.send({
                 msg: 'Failed to get wod_list from redis',
+                err: e
+            })
+        })
+})
+/*]
+[|]
+[*/
+router.post('/insomnia/get-wod', json_parser, (req, res) => {
+    R.WOD.get_wod()
+        .then((wod) => {
+            res.send({
+                msg: 'Retrieved workout',
+                wod: JSON.parse(wod)
+            })
+        })
+        .catch((e) => {
+            res.send({
+                msg: 'Failed to get wod from redis',
                 err: e
             })
         })

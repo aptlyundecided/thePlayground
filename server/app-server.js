@@ -21,6 +21,13 @@ const port = process.env.PORT || 5000
 const app = express()
 /*]
 [|] --------------------------------------------------------- ||
+[|]        App Modules
+[|] --------------------------------------------------------- ||
+[*/
+const WOD = require('../src/apps/wod/module')
+WOD.start()
+/*]
+[|] --------------------------------------------------------- ||
 [|]        Import Routers
 [|] --------------------------------------------------------- ||
 [*/
@@ -35,7 +42,7 @@ app.use(express.static(path.join(__dirname, '../src/vue_front_end/dist/')))
 /*]
 [|]
 [*/
-app.use('/WOD', WOD_router)
+app.use('/wod', WOD_router)
 /*]
 [|] --------------------------------------------------------- ||
 [|]        Configure Application Level Routes
