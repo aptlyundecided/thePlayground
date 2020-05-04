@@ -3,20 +3,12 @@ const selectWOD = require('../../../src/apps/wod/wod_select')
 /*]
 [|]
 [*/
-test('Select a WOD', (t) => {
-    const workout = selectWOD()
-    // t.is(typeof workout, 'object')
+test('Select a WOD', async t => {
+    const workout = await selectWOD('./src/apps/wod/wods.json')
+    t.is(typeof workout, 'object')
+    t.is(typeof workout.name, 'string')
     t.pass()
 })
-/*]
-[|]
-[*/
-// test('set workout name', (t) => {
-//     const workout = newWorkout()
-//     const name = 'The noisy headphone'
-//     workout.set_name(name)
-//     t.is(workout.name, name)
-// })
 /*]
 [E] END
 [*/
