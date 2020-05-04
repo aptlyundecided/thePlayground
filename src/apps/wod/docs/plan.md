@@ -17,7 +17,8 @@ It's going to be dead stupid.  I'll just make it super-fuckin-minimal.  Pull ups
 ## MVP Planning
 
 - [x] Create a random name generator
-- [ ] Add at least 10 workouts to the JSON file
-- [ ] Randomly select a workout from the JSON file
+- [x] Add at least 10 workouts to the JSON file
+- [x] Randomly select a workout from the JSON file
 - [x] Create a proper workout data structure
-- [ ] 
+- [ ] Create the vue components which will handle this
+- [ ] Create a redis structure to hold the last 14 days workouts

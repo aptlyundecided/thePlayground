@@ -17,5 +17,13 @@ test('set workout name', (t) => {
     t.is(workout.name, name)
 })
 /*]
+[|]
+[*/
+test('for time = true', (t) => {
+    const workout = newWorkout()
+    workout.for_time_true()
+    t.is(workout.workout.for_time, true)
+})
+/*]
 [E] END
 [*/

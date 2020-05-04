@@ -42,6 +42,80 @@
                 ],
                 "for_time": true
             }
+        },
+        {
+            "name": "The Isogeothermic Assignment",
+            "workout": {
+                "rounds": 1,
+                "items": [
+                    "100 Sandbag Rows"
+                ],
+                "for_time": true
+            }
+        },
+        {
+            "name": "The Isogeothermic Assignment",
+            "workout": {
+                "rounds": 1,
+                "items": [
+                    "100 Sandbag Rows"
+                ],
+                "for_time": true
+            }
+        },
+        {
+            "name": "The Raddled Drizzle",
+            "workout": {
+                "rounds": 1,
+                "items": [
+                    "half mile run",
+                    "15 rear lunges each leg",
+                    "half mile run"
+                ],
+                "for_time": true
+            }
+        },
+        {
+            "name": "The Plum Megaliac",
+            "workout": {
+                "rounds": 5,
+                "items": [
+                    "5 Pull Ups",
+                    "5 Sanbag Squats",
+                    "5 Spiderman Pushups"
+                ],
+                "for_time": true
+            }
+        },
+        {
+            "name": "The Ungrudged Representative",
+            "workout": {
+                "rounds": 5,
+                "items": [
+                    "Pushups to failure"
+                ],
+                "for_time": false
+            }
+        },
+        {
+            "name": "The Unpolluted Trailer",
+            "workout": {
+                "rounds": 1,
+                "items": [
+                    "100 Pullups"
+                ],
+                "for_time": true
+            }
+        },
+        {
+            "name": "The Unwithered Corn",
+            "workout": {
+                "rounds": 1,
+                "items": [
+                    "100 Pushups"
+                ],
+                "for_time": true
+            }
         }
     ]
 }
