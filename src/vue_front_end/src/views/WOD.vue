@@ -5,6 +5,7 @@
                 div(class='md-title') Programmer Workout of the Day
             v-card-text
                 active_wod
+                wod_list
             v-card-actions
                 router-link(to='/')
                     v-btn Go Home
@@ -15,13 +16,15 @@
 
 <script>
     import active_wod from '../components/wod/active_wod'
+    import wod_list from '../components/wod/wod_list'
     /*]
     [|]
     [*/
     export default {
         name: 'app-selector',
         components: {
-            active_wod
+            active_wod,
+            wod_list
         },
         data: () => ({})
     }
